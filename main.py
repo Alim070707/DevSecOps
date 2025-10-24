@@ -33,7 +33,7 @@ class GreetingApp:
 
     def about():
     """Display information about the application"""
-    return "Greeting App v1.1.0 - Multi-language greeting application"
+    return "Greeting App v1.2.0 - Advanced Multi-language Greeting Application"
 
 def main():
     app = GreetingApp()
