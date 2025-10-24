@@ -31,19 +31,22 @@ class GreetingApp:
         """Get list of available languages"""
         return list(self.greetings.keys())
 
+    def about():
+    """Display information about the application"""
+    return "Greeting App v1.1.0 - Multi-language greeting application"
+
 def main():
     app = GreetingApp()
     
     if len(sys.argv) > 1:
+        if sys.argv[1] == "--about":
+            print(about())
+            return
         name = sys.argv[1]
     else:
         name = "World"
     
     print(app.greet(name))
     
-    # Show available languages
     if len(sys.argv) > 2 and sys.argv[2] == "--show-languages":
         print(f"Available languages: {', '.join(app.get_available_languages())}")
-
-if __name__ == "__main__":
-    main()
